@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
-import { BrowserRouter, Route } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import { init } from './firebase';
-import HomePage from './HomePage';
+import Routes from './Routes';
 
 import configureStore from './configureStore';
 
@@ -18,9 +17,7 @@ class App extends Component {
   render() {
     return (
       <Provider store={this.store}>
-      <BrowserRouter>
-        <Route exact path="/" component={HomePage} />
-        </BrowserRouter>
+        <Routes />
       </Provider>
     );
   }
